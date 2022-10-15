@@ -1,0 +1,19 @@
+<nav class="barra-navegacion" [ngClass]="collapsed ? 'barra-navegacion-collapsed': ''">
+  <div class="logo-container">
+    <button class="logo" (click)="abrirMenu()">GI</button>
+    <div class="logo-texto" @fadeIn *ngIf="collapsed">Genshin Impact</div>
+    <button class="btn-cerrar" @rotate *ngIf="collapsed" (click)="cerrarMenu()">
+      <i class="bi bi-x-lg" id="icono-cerrar"></i>
+    </button>
+  </div>
+  <ul class="navegacion-lista">
+    <li class="lista-item" *ngFor="let datos of barraDatos">
+      <a class="item-link" [routerLink]="[datos.routerLink]"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">
+        <i class="link-icono" [class]="datos.icono"></i>
+        <span class="link-texto" @fadeIn *ngIf="collapsed">{{datos.label}}</span>
+      </a>
+    </li>
+  </ul>
+</nav>
