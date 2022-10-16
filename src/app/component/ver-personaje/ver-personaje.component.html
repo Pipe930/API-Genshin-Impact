@@ -2,11 +2,12 @@
 <div class="personaje" *ngIf="personaje">
   <div class="header-carta">
     <h2>{{personaje.name | titlecase}}</h2>
-    <img src="https://cdnportal.mobalytics.gg/production/2022/05/e1dc01d2-genshin-impact-ganyu-introduction.png" alt="Imagen Personaje" *ngIf="personaje.name == 'ganyu'">
+    <img src="https://cdnportal.mobalytics.gg/production/2022/05/e1dc01d2-genshin-impact-ganyu-introduction.png" alt="Imagen Personaje" *ngIf="nombrePersonaje == 'ganyu'">
+    <img src="https://upload-os-bbs.hoyolab.com/upload/2021/08/21/61096318/44b04f76e422a8b1ed0cd6e998ce11d9_7223607664595256695.jpg" alt="Imagen Personaje" *ngIf="nombrePersonaje == 'kokomi'">
   </div>
   <div class="contenido-carta">
     <h3>Detalles</h3>
-    <ul>
+    <ul class="lista-carta">
       <li>
         <label for="">Titulo: {{personaje.title}}</label>
       </li>

@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
 import { transition, trigger, style, animate, keyframes } from '@angular/animations';
 import { barraNavegacionDatos } from './navegacion-data';
+import { INavbarData } from './NavbarData';
 
 interface SideNavToggle {
   screenWidth: number;
@@ -45,6 +46,7 @@ export class SidenavComponent implements OnInit {
   public collapsed: boolean = false;
   public screenWidth: number = 0;
   public barraDatos = barraNavegacionDatos;
+  public multiple: boolean = false;
 
   constructor() { }
 
@@ -84,6 +86,17 @@ export class SidenavComponent implements OnInit {
         screenWidth: this.screenWidth,
       }
     )
+  }
+
+  public handleClick(item: INavbarData):void{
+    if(!this.multiple){
+      for(let modeItem of this.barraDatos){
+        if(item !== modeItem && modeItem.expanded){
+          modeItem.expanded = false;
+        }
+      }
+    }
+    item.expanded = !item.expanded;
   }
 
 }

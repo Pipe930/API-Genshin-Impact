@@ -12,6 +12,7 @@ import { PersonajesComponent } from './component/personajes/personajes.component
 import { InicioComponent } from './component/inicio/inicio.component';
 import { ArmasComponent } from './component/armas/armas.component';
 import { VerPersonajeComponent } from './component/ver-personaje/ver-personaje.component';
+import { SublevelMenuComponent } from './component/sidenav/sublevel-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VerPersonajeComponent } from './component/ver-personaje/ver-personaje.c
     PersonajesComponent,
     InicioComponent,
     ArmasComponent,
-    VerPersonajeComponent
+    VerPersonajeComponent,
+    SublevelMenuComponent
   ],
   imports: [
     BrowserModule,

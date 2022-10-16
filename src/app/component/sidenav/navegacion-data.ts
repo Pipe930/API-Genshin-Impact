@@ -1,17 +1,29 @@
-export const barraNavegacionDatos = [
+import { INavbarData } from './NavbarData';
+
+export const barraNavegacionDatos: INavbarData[] = [
   {
     routerLink: '/Inicio',
-    icono: 'bi bi-house-door',
+    icon: 'bi bi-house-door',
     label: 'Inicio',
   },
   {
     routerLink: '/personajes',
-    icono: 'bi bi-person-lines-fill',
+    icon: 'bi bi-person-lines-fill',
     label: 'Personajes',
+    items: [
+      {
+        routerLink: '',
+        label: 'Vision'
+      },
+      {
+        routerLink: '',
+        label: 'Arma'
+      }
+    ]
   },
   {
     routerLink: '/armas',
-    icono: 'bi bi-hammer',
+    icon: 'bi bi-hammer',
     label: 'Armas',
   }
 ]
