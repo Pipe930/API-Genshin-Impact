@@ -13,7 +13,37 @@ export const barraNavegacionDatos: INavbarData[] = [
     items: [
       {
         routerLink: '',
-        label: 'Vision'
+        label: 'Vision',
+        items: [
+          {
+            routerLink: '',
+            label: 'Electro'
+          },
+          {
+            routerLink: '',
+            label: 'Pyro'
+          },
+          {
+            routerLink: '',
+            label: 'Hydro'
+          },
+          {
+            routerLink: '',
+            label: 'Anemo'
+          },
+          {
+            routerLink: '',
+            label: 'Dendro'
+          },
+          {
+            routerLink: '',
+            label: 'Cryo'
+          },
+          {
+            routerLink: '',
+            label: 'Geo'
+          }
+        ]
       },
       {
         routerLink: '',
@@ -25,5 +55,37 @@ export const barraNavegacionDatos: INavbarData[] = [
     routerLink: '/armas',
     icon: 'bi bi-hammer',
     label: 'Armas',
+    items: [
+      {
+        routerLink: '',
+        label: 'Arco'
+      },
+      {
+        routerLink: '',
+        label: 'Espada Ligera'
+      },
+      {
+        routerLink: '',
+        label: 'Catalizador'
+      },
+      {
+        routerLink: '',
+        label: 'Mandoble'
+      },
+      {
+        routerLink: '',
+        label: 'Lanza'
+      }
+    ]
+  },
+  {
+    routerLink: '/artefactos',
+    icon: 'bi bi-pie-chart-fill',
+    label: 'Artefactos'
+  },
+  {
+    routerLink: '/materiales',
+    icon: 'bi bi-bookmark-fill',
+    label: 'Materiales'
   }
 ]

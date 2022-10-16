@@ -20,38 +20,40 @@
       ></app-sublevel-menu>
     </li>
   </ul> -->
-  <ul class="navegacion-lista">
-    <li class="lista-item" *ngFor="let datos of barraDatos">
-      <a class="item-link"
-      *ngIf="datos.items && datos.items.length > 0"
-      (click)="handleClick(datos)"
-      >
-        <i class="link-icono" [class]="datos.icon"></i>
-        <span class="link-texto"
-        @fadeIn *ngIf="collapsed"
-        >{{datos.label}}</span>
-        <i class="menu-collapse-icon"
-        *ngIf="datos.items && collapsed"
-        [ngClass]="!datos.expanded ? 'bi bi-caret-right-fill': 'bi bi-caret-down-fill'"
-        ></i>
-      </a>
-      <a class="item-link"
-      *ngIf="!datos.items || (datos.items && datos.items.length === 0)"
-      [routerLink]="[datos.routerLink]"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{exact: true}"
-      >
-        <i class="link-icono" [class]="datos.icon"></i>
-        <span class="link-texto" @fadeIn *ngIf="collapsed">{{datos.label}}</span>
-      </a>
-      <div *ngIf="collapsed && datos.items && datos.items.length > 0">
-        <app-sublevel-menu
-        [datos]="datos"
-        [multiple]="multiple"
-        [collapsed]="collapsed"
-        [expanded]="datos.expanded"
-        ></app-sublevel-menu>
-      </div>
-    </li>
-  </ul>
+  <div class="scrollwrap scrollwrap_deplayed">
+    <ul class="navegacion-lista">
+      <li class="lista-item" *ngFor="let datos of barraDatos">
+        <a class="item-link"
+        *ngIf="datos.items && datos.items.length > 0"
+        (click)="handleClick(datos)"
+        >
+          <i class="link-icono" [class]="datos.icon"></i>
+          <span class="link-texto"
+          @fadeIn *ngIf="collapsed"
+          >{{datos.label}}</span>
+          <i class="menu-collapse-icon"
+          *ngIf="datos.items && collapsed"
+          [ngClass]="!datos.expanded ? 'bi bi-caret-right-fill': 'bi bi-caret-down-fill'"
+          ></i>
+        </a>
+        <a class="item-link"
+        *ngIf="!datos.items || (datos.items && datos.items.length === 0)"
+        [routerLink]="[datos.routerLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        >
+          <i class="link-icono" [class]="datos.icon"></i>
+          <span class="link-texto" @fadeIn *ngIf="collapsed">{{datos.label}}</span>
+        </a>
+        <div *ngIf="collapsed && datos.items && datos.items.length > 0">
+          <app-sublevel-menu
+          [datos]="datos"
+          [multiple]="multiple"
+          [collapsed]="collapsed"
+          [expanded]="datos.expanded"
+          ></app-sublevel-menu>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>

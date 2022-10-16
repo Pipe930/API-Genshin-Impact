@@ -38,6 +38,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       </a>
       <div *ngIf="item.items && item.items.length > 0">
         <app-sublevel-menu
+        [datos]="item"
         [collapsed]="collapsed"
         [multiple]="multiple"
         [expanded]="item.expanded"

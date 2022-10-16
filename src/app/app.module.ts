@@ -13,6 +13,8 @@ import { InicioComponent } from './component/inicio/inicio.component';
 import { ArmasComponent } from './component/armas/armas.component';
 import { VerPersonajeComponent } from './component/ver-personaje/ver-personaje.component';
 import { SublevelMenuComponent } from './component/sidenav/sublevel-menu.component';
+import { ArtefactosComponent } from './component/artefactos/artefactos.component';
+import { MaterialesComponent } from './component/materiales/materiales.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SublevelMenuComponent } from './component/sidenav/sublevel-menu.compone
     InicioComponent,
     ArmasComponent,
     VerPersonajeComponent,
-    SublevelMenuComponent
+    SublevelMenuComponent,
+    ArtefactosComponent,
+    MaterialesComponent
   ],
   imports: [
     BrowserModule,

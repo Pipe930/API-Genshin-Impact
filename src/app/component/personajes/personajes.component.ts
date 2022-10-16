@@ -22,4 +22,8 @@ export class PersonajesComponent implements OnInit {
     })
   }
 
+  public barraBusqueda():void{
+
+  }
+
 }
