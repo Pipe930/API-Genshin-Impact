@@ -1,1 +1,12 @@
-<p>personajes works!</p>
+<div class="lista-personajes">
+  <h2 class="titulo-lista-personajes">Lista Personajes</h2>
+  <article class="personaje" *ngFor="let pj of listaPersonajes">
+    <div>
+      <h2>{{pj}}</h2>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit libero, et minus molestias neque quibusdam architecto molestiae, nulla magni temporibus ipsa doloremque aliquam aliquid consectetur, quam nisi porro possimus repellendus.</p>
+    </div>
+    <button type="button" [routerLink]="['/personaje/', pj]">Ver</button>
+  </article>
+</div>

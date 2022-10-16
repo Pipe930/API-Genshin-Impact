@@ -1,7 +1,7 @@
 <nav class="barra-navegacion" [ngClass]="collapsed ? 'barra-navegacion-collapsed': ''">
   <div class="logo-container">
     <button class="logo" (click)="abrirMenu()">GI</button>
-    <div class="logo-texto" @fadeIn *ngIf="collapsed">Genshin Impact</div>
+    <div class="logo-texto" @fadeIn *ngIf="collapsed">Api Impact</div>
     <button class="btn-cerrar" @rotate *ngIf="collapsed" (click)="cerrarMenu()">
       <i class="bi bi-x-lg" id="icono-cerrar"></i>
     </button>

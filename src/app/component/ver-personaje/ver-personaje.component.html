@@ -1,0 +1,69 @@
+<button type="button" [routerLink]="['/personajes']">Volver</button>
+<div class="personaje" *ngIf="personaje">
+  <div class="header-carta">
+    <h2>{{personaje.name | titlecase}}</h2>
+    <img src="https://cdnportal.mobalytics.gg/production/2022/05/e1dc01d2-genshin-impact-ganyu-introduction.png" alt="Imagen Personaje" *ngIf="personaje.name == 'ganyu'">
+  </div>
+  <div class="contenido-carta">
+    <h3>Detalles</h3>
+    <ul>
+      <li>
+        <label for="">Titulo: {{personaje.title}}</label>
+      </li>
+      <li>
+        <label for="">Vision: {{personaje.vision}}</label>
+      </li>
+      <li>
+        <label for="">Arma: {{personaje.weapon}}</label>
+      </li>
+      <li>
+        <label for="">Rareza: {{personaje.rarity}} Estrellas</label>
+      </li>
+      <li>
+        <label for="">Constelacion: {{personaje.constellation}}</label>
+      </li>
+      <li>
+        <label for="">Afiliacion: {{personaje.affiliation}}</label>
+      </li>
+      <li>
+        <label for="">Descripcion: {{personaje.description}}</label>
+      </li>
+    </ul>
+  </div>
+  <table class="tabla-personaje-talentos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Debloqueable</th>
+        <th>Descripcion</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detalle of personaje.skillTalents">
+        <td>{{detalle.name}}</td>
+        <td>{{detalle.unlock}}</td>
+        <td>{{detalle.description}}</td>
+        <td>{{detalle.type}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="tabla-personaje-constelaciones">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Desbloqueable</th>
+        <th>Descripcion</th>
+        <th>Nivel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let constelacion of personaje.constellations">
+        <td>{{constelacion.name}}</td>
+        <td>{{constelacion.unlock}}</td>
+        <td>{{constelacion.description}}</td>
+        <td>{{constelacion.level}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

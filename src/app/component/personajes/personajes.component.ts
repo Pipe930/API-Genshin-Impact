@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiGIService } from './../../service/api-gi.service';
 
 @Component({
   selector: 'app-personajes',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personajes.component.scss']
 })
 export class PersonajesComponent implements OnInit {
+  public listaPersonajes: Array<any> = [];
 
-  constructor() { }
+  constructor(
+    private servicioAPI: ApiGIService
+  ) { }
 
   ngOnInit(): void {
+    this.servicioAPI.listaPersonajes().subscribe((resultado:any) => {
+      console.log(resultado);
+      this.listaPersonajes = resultado;
+    }, error => {
+      console.error(error);
+    })
   }
 
 }

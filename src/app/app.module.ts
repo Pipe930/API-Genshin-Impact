@@ -11,6 +11,7 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { PersonajesComponent } from './component/personajes/personajes.component';
 import { InicioComponent } from './component/inicio/inicio.component';
 import { ArmasComponent } from './component/armas/armas.component';
+import { VerPersonajeComponent } from './component/ver-personaje/ver-personaje.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ArmasComponent } from './component/armas/armas.component';
     SidenavComponent,
     PersonajesComponent,
     InicioComponent,
-    ArmasComponent
+    ArmasComponent,
+    VerPersonajeComponent
   ],
   imports: [
     BrowserModule,
