@@ -1,11 +1,11 @@
 
 <div class="buscador">
   <label for="">Search</label>
-  <input type="search" name="buscar" id="">
+  <input type="search" name="buscar" (keyup)="barraBusqueda($event)">
 </div>
 <div class="lista-personajes">
   <h2 class="titulo-lista-personajes">Lista Personajes</h2>
-  <article class="personaje" *ngFor="let pj of listaPersonajes">
+  <article class="personaje" *ngFor="let pj of listaNombres">
     <div>
       <h2>{{pj | titlecase}}</h2>
     </div>

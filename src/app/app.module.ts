@@ -15,6 +15,7 @@ import { VerPersonajeComponent } from './component/ver-personaje/ver-personaje.c
 import { SublevelMenuComponent } from './component/sidenav/sublevel-menu.component';
 import { ArtefactosComponent } from './component/artefactos/artefactos.component';
 import { MaterialesComponent } from './component/materiales/materiales.component';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MaterialesComponent } from './component/materiales/materiales.component
     VerPersonajeComponent,
     SublevelMenuComponent,
     ArtefactosComponent,
-    MaterialesComponent
+    MaterialesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
