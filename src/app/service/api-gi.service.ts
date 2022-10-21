@@ -24,4 +24,10 @@ export class ApiGIService {
 
     return this.httpclient.get<Personaje>(urlPersonaje);
   }
+
+  public listaArmas(){
+    let urlArmas = `${this.urlApi}/weapons`
+
+    return this.httpclient.get(urlArmas);
+  }
 }

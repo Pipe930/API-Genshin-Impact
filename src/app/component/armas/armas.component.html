@@ -1,1 +1,12 @@
-<p>armas works!</p>
+<div class="container-armas">
+  <h2 class="titulo">Lista Armas</h2>
+  <article class="arma" *ngFor="let arma of nombresArmas">
+    <div>
+      <h4>{{arma | titlecase}}</h4>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis asperiores ipsum exercitationem eveniet molestias distinctio architecto, ipsam saepe, tempore rerum dolorem, nam aperiam cupiditate ex nemo odio explicabo sed magnam.</p>
+    </div>
+    <button type="button">Ver</button>
+  </article>
+</div>

@@ -1,10 +1,6 @@
 
-<div class="buscador">
-  <label for="">Search</label>
-  <input type="search" name="buscar" (keyup)="barraBusqueda($event)">
-</div>
+<h2 class="titulo-lista-personajes">Lista Personajes</h2>
 <div class="lista-personajes">
-  <h2 class="titulo-lista-personajes">Lista Personajes</h2>
   <article class="personaje" *ngFor="let pj of listaNombres">
     <div>
       <h2>{{pj | titlecase}}</h2>

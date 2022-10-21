@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiGIService } from './../../service/api-gi.service';
 
 @Component({
   selector: 'app-armas',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./armas.component.scss']
 })
 export class ArmasComponent implements OnInit {
+  public nombresArmas: Array<any> = [];
 
-  constructor() { }
+  constructor(
+    private servicioAPI: ApiGIService
+  ) { }
 
   ngOnInit(): void {
+    this.servicioAPI.listaArmas().subscribe((resultado:any) => {
+      console.log(resultado);
+      this.nombresArmas = resultado;
+    }, error => {
+      console.error(error);
+    })
   }
 
 }
