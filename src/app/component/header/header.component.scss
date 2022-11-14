@@ -9,6 +9,113 @@
 
   position: fixed;
   top: 0;
+
+  .header-content{
+    background-color: #FFFFFF;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 10px 0 rgb(34 41 47 / 10%);
+    padding: 0.813rem 1.563rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-content-left{
+      .search-container{
+        position: relative;
+
+        .normal-search{
+          .search{
+            border: none;
+            height: 2.375rem;
+            padding-left: 2.5rem;
+            padding-right: 1.25rem;
+            background-color: #F3F3F9;
+            box-shadow: none;
+            border-radius: 1.875rem;
+            outline: 0;
+          }
+
+          .search-icon{
+            position: absolute;
+            font-size: 1rem;
+            line-height: 2.375rem;
+            left: 0.813rem;
+            top: 0;
+            color: #74788d;
+          }
+        }
+      }
+    }
+    .header-content-right{
+      display: flex;
+      align-items: center;
+
+      .header-menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1.25rem;
+
+        .header-menu-item{
+          .header-menu-item-btn{
+            font-size: 18px;
+            height: 42px;
+            width: 42px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            margin-left: 5px;
+            outline: 0;
+            color: #495057;
+
+            .flag{
+              height: 17px;
+              border-radius: 3px;
+              margin-top: 2px;
+            }
+          }
+
+          .header-menu-item-btn:hover,
+          .header-menu-item-btn:focus{
+            background: #eff2f3;
+            .menu-icon{
+              color: #699dfa;
+            }
+          }
+        }
+      }
+
+      .header-user-avatar-container{
+        margin-left: 20px;
+
+        .header-user-avatar{
+          position: relative;
+
+          .user-avatar{
+            margin-bottom: -4px;
+            width: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(35 35 35 / 15%);
+            cursor: pointer;
+          }
+
+          .cirle-indicator{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: -2px;
+            right: -3px;
+            background: #699dfa;
+
+            &.pulse{
+              animation: pulse-animation 1.2s infinite;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .header-trimmed{
@@ -19,4 +126,13 @@
 .header-md-screen{
   width: calc(100% - 5rem);
   margin-left: 5rem;
+}
+
+@keyframes pulse-animation {
+  0%{
+    box-shadow: 0 0 0 0 rgba(26, 104, 206, 0.6);
+  }
+  100%{
+    box-shadow: 0 0 0 13px rgba(17, 64, 126, 0);
+  }
 }
