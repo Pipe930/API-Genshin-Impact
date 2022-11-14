@@ -10,73 +10,11 @@ export const barraNavegacionDatos: INavbarData[] = [
     routerLink: '/personajes',
     icon: 'bi bi-person-lines-fill',
     label: 'Personajes',
-    items: [
-      {
-        routerLink: '',
-        label: 'Vision',
-        items: [
-          {
-            routerLink: '',
-            label: 'Electro'
-          },
-          {
-            routerLink: '',
-            label: 'Pyro'
-          },
-          {
-            routerLink: '',
-            label: 'Hydro'
-          },
-          {
-            routerLink: '',
-            label: 'Anemo'
-          },
-          {
-            routerLink: '',
-            label: 'Dendro'
-          },
-          {
-            routerLink: '',
-            label: 'Cryo'
-          },
-          {
-            routerLink: '',
-            label: 'Geo'
-          }
-        ]
-      },
-      {
-        routerLink: '',
-        label: 'Arma'
-      }
-    ]
   },
   {
     routerLink: '/armas',
     icon: 'bi bi-hammer',
-    label: 'Armas',
-    items: [
-      {
-        routerLink: '',
-        label: 'Arco'
-      },
-      {
-        routerLink: '',
-        label: 'Espada Ligera'
-      },
-      {
-        routerLink: '',
-        label: 'Catalizador'
-      },
-      {
-        routerLink: '',
-        label: 'Mandoble'
-      },
-      {
-        routerLink: '',
-        label: 'Lanza'
-      }
-    ]
+    label: 'Armas'
   },
   {
     routerLink: '/artefactos',
@@ -87,5 +25,17 @@ export const barraNavegacionDatos: INavbarData[] = [
     routerLink: '/materiales',
     icon: 'bi bi-bookmark-fill',
     label: 'Materiales'
+  },
+  {
+    routerLink: '',
+    icon: 'bi bi-gear-fill',
+    label: 'Configuracion',
+    items: [
+      {
+        routerLink: '',
+        icon: '',
+        label: 'Perfil'
+      }
+    ]
   }
 ]
