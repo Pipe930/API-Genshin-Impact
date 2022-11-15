@@ -17,6 +17,9 @@ import { ArtefactosComponent } from './component/artefactos/artefactos.component
 import { MaterialesComponent } from './component/materiales/materiales.component';
 import { HeaderComponent } from './component/header/header.component';
 
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +40,8 @@ import { HeaderComponent } from './component/header/header.component';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
+    CdkMenuModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]

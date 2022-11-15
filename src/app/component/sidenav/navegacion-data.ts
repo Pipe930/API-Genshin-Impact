@@ -35,6 +35,11 @@ export const barraNavegacionDatos: INavbarData[] = [
         routerLink: '',
         icon: '',
         label: 'Perfil'
+      },
+      {
+        routerLink: '',
+        icon: '',
+        label: 'Configuracion'
       }
     ]
   }
