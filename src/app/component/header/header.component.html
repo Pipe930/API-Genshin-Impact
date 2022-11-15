@@ -22,23 +22,13 @@
     <div class="header-content-right">
       <div class="header-menu">
         <div class="header-menu-item">
-          <button class="header-menu-item-btn">
-            <img src="../../../assets/imgs/1f1e8-1f1f1.png" class="flag" alt="flag">
+          <button class="header-menu-item-btn" [cdkMenuTriggerFor]="LanguageOverlay">
+            <img [src]="'assets/flags/' + selectedLanguage.flag + '.jpg'" class="flag" alt="flag">
           </button>
         </div>
         <div class="header-menu-item">
           <button class="header-menu-item-btn">
             <i class="menu-icon fa-expanded bi bi-fullscreen"></i>
-          </button>
-        </div>
-        <div class="header-menu-item">
-          <button class="header-menu-item-btn">
-            <i class="menu-icon fa-bell bi bi-bell"></i>
-          </button>
-        </div>
-        <div class="header-menu-item">
-          <button class="header-menu-item-btn">
-            <i class="menu-icon fa-comment bi bi-chat-left-text"></i>
           </button>
         </div>
       </div>
@@ -58,5 +48,16 @@
     <button class="search-btn" type="button">
       <i class="search-icon bi bi-search"></i>
     </button>
+  </div>
+</ng-template>
+
+<ng-template #LanguageOverlay>
+  <div class="overlay overlay-language overlay-fall" cdkMenu>
+    <ul>
+      <li *ngFor="let lang of languages" cdkMenuItem>
+        <img [src]="'assets/flags/' + lang.flag + '.jpg'" alt="flag">
+        <span>{{lang.language}}</span>
+      </li>
+    </ul>
   </div>
 </ng-template>

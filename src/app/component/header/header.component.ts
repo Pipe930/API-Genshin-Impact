@@ -4,6 +4,7 @@ import {
   Input,
   HostListener
 } from '@angular/core';
+import { Languages } from './header-dummy-data';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,9 @@ export class HeaderComponent implements OnInit {
   @Input() screenWidth: number = 0;
 
   public canShowSearchAsOverlay: boolean = false;
+  public selectedLanguage: any;
+
+  public languages:any = Languages;
 
   constructor() { }
 
@@ -26,6 +30,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkCanShowSearchAsOverlay(window.innerWidth);
+    this.selectedLanguage = this.languages[0];
   }
 
   public getHeadClass(): string{
